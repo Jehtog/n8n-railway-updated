@@ -5,5 +5,6 @@ RUN wget -q https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-stati
     mv ffmpeg-*-amd64-static/ffmpeg /usr/local/bin/ && \
     mv ffmpeg-*-amd64-static/ffprobe /usr/local/bin/ && \
     rm -rf ffmpeg* && \
-    chown -R node:node /home/node
+    mkdir -p /home/node/.n8n && \
+    chown -R node:node /home/node/.n8n
 USER node
